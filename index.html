@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BakeJoy | Cake Shop</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sniglet:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="CSS/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ============ HEADER ============ -->
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-md container">
+        <a class="navbar-brand logo" href="#home">BakeJoy</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-label="Menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#signature">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#journal">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-pill btn-outline-coral">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============ 1) HERO ============ -->
+      <section class="hero" id="home">
+        <div class="container hero-stage">
+          <button class="arrow left" id="prevSlide" aria-label="Previous">
+            &#10094;
+          </button>
+          <span class="spark s1">✦</span><span class="spark s2">✦</span
+          ><span class="spark s3">✧</span>
+          <h1 class="h-top">Delight in</h1>
+          <div class="hero-img-box">
+            <img
+              class="hero-img"
+              id="heroImg"
+              src="Images/hero-croissant.png"
+              alt="Choco croissant"
+            />
+          </div>
+          <h1 class="h-bottom">every bites!</h1>
+          <div class="hero-text">
+            <p>
+              Experience the joy of perfectly baked cakes, made with love and
+              crafted to bring a smile to every celebration.
+            </p>
+            <a href="#signature" class="btn btn-pill btn-coral">Shop now</a>
+          </div>
+          <small class="hero-tag" id="heroTag">Choco Croissant ( 0.6$ )</small>
+          <button class="arrow right" id="nextSlide" aria-label="Next">
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <!-- ============ 2) OUR SIGNATURE ============ -->
+      <section id="signature" class="peach wave">
+        <div class="container">
+          <h2 class="title text-center reveal">Our Signature</h2>
+          <div class="row g-4 mt-2">
+            <div class="col-md-4 product reveal" style="--d: 0s">
+              <div class="stamp">
+                <div class="stamp-img">
+                  <img
+                    src="Images/cookies.jpg"
+                    alt="Decendant Choco Chips"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="prod">
+                <div>
+                  <h3>Decendant Choco Chips</h3>
+                  <b>$15</b>
+                </div>
+                <div class="text-end">
+                  <button class="cart" aria-label="Add to cart">🛍</button
+                  ><br />
+                  <a href="#signature">More Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product reveal" style="--d: 0.15s">
+              <div class="stamp">
+                <div class="stamp-img">
+                  <img
+                    src="Images/chiffon.jpg"
+                    alt="Classic Vanilla Chiffon Cake"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="prod">
+                <div>
+                  <h3>Classic Vanilla Chiffon Cake</h3>
+                  <b>$25</b>
+                </div>
+                <div class="text-end">
+                  <button class="cart" aria-label="Add to cart">🛍</button
+                  ><br />
+                  <a href="#signature">More Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 product reveal" style="--d: 0.3s">
+              <div class="stamp">
+                <div class="stamp-img">
+                  <img
+                    src="Images/mousse.jpg"
+                    alt="Choco Mousse Extravaganza"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="prod">
+                <div>
+                  <h3>Choco Mousse Extravaganza</h3>
+                  <b>$35</b>
+                </div>
+                <div class="text-end">
+                  <button class="cart" aria-label="Add to cart">🛍</button
+                  ><br />
+                  <a href="#signature">More Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="pager reveal" id="pager">
+            <li>
+              <button data-dir="-1" aria-label="Previous page">&#10094;</button>
+            </li>
+            <li><button class="page active">1</button></li>
+            <li><button class="page">2</button></li>
+            <li><button class="page">3</button></li>
+            <li><span class="dots">...</span></li>
+            <li><button class="page">10</button></li>
+            <li>
+              <button data-dir="1" aria-label="Next page">&#10095;</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ 3) BEST CHOICE (About) ============ -->
+      <section id="about" class="cream wave">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-md-6 reveal">
+              <h2 class="title">Best Choice for<br />Every Occasion</h2>
+              <p class="body-text">
+                At BAKEJOY, we turn simple ingredients into delectable works of
+                edible art. Satisfy your cravings with our irresistible pastries
+                and baked goods, delivered fresh from the oven for you truly.
+              </p>
+              <div class="pills mt-4">
+                <span class="pill">Quality Ingredients</span
+                ><span class="pill">Personalized Designs</span>
+                <span class="pill">On-time Delivery</span
+                ><span class="pill">Affordable Prices</span
+                ><span class="pill outline">Values</span>
+              </div>
+            </div>
+            <div class="col-md-6 text-center reveal" style="--d: 0.2s">
+              <img
+                class="feature-img"
+                src="Images/hero-tart.png"
+                alt="Strawberry tart"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 4) HOW TO ORDER ============ -->
+      <section id="how" class="peach wave">
+        <div class="container">
+          <h2 class="title text-center reveal">How to Order</h2>
+          <div class="row g-3 g-md-4 mt-2">
+            <div class="col-6 col-md-3 reveal" style="--d: 0s">
+              <div class="step">
+                <h3>Choose</h3>
+                <p>Pick your favorite cake flavor and design.</p>
+                <i class="line"></i><span class="num">1</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 reveal" style="--d: 0.12s">
+              <div class="step down">
+                <span class="num">2</span><i class="line"></i>
+                <h3>Customize</h3>
+                <p>Add personal touches and special requests.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 reveal" style="--d: 0.24s">
+              <div class="step">
+                <h3>Order</h3>
+                <p>Place and pay your order via online.</p>
+                <i class="line"></i><span class="num">3</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 reveal" style="--d: 0.36s">
+              <div class="step down">
+                <span class="num">4</span><i class="line"></i>
+                <h3>Wait</h3>
+                <p>Your cake will be delivered right to you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5) CAKE JOURNAL ============ -->
+      <section id="journal" class="cream wave">
+        <div class="container">
+          <h2 class="title text-center reveal">Cake Journal</h2>
+          <div class="tabs text-center reveal" id="tabs">
+            <button class="pill outline" data-tab="tips">
+              Tips &amp; Trick
+            </button>
+            <button class="pill active" data-tab="new">New Article</button>
+            <button class="pill outline" data-tab="promo">Promotions</button>
+          </div>
+          <div class="row g-4 mt-2" id="articles">
+            <div class="col-md-4 article reveal" style="--d: 0s">
+              <div class="art-wrap">
+                <img
+                  class="art"
+                  src="Images/post1.jpg"
+                  alt="Caramel cake"
+                  loading="lazy"
+                />
+              </div>
+              <a class="art-title" href="#journal"
+                >Our Favorite Cakes that Always Make It to The Best Seller</a
+              >
+              <a class="more" href="#journal">Read More</a>
+            </div>
+            <div class="col-md-4 article reveal" style="--d: 0.15s">
+              <div class="art-wrap">
+                <img
+                  class="art"
+                  src="Images/post2.jpg"
+                  alt="Pink cherry cake"
+                  loading="lazy"
+                />
+              </div>
+              <a class="art-title" href="#journal"
+                >Designing Your Own Customized Dream Birthday Cake</a
+              >
+              <a class="more" href="#journal">Read More</a>
+            </div>
+            <div class="col-md-4 article reveal" style="--d: 0.3s">
+              <div class="art-wrap">
+                <img
+                  class="art"
+                  src="Images/post3.jpg"
+                  alt="Wedding cake"
+                  loading="lazy"
+                />
+              </div>
+              <a class="art-title" href="#journal"
+                >Choosing the Right Cake for Any Occasion and Party: A Guide</a
+              >
+              <a class="more" href="#journal">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6) SUBSCRIBE ============ -->
+      <section id="contact" class="peach wave">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-md-5 text-center reveal">
+              <img
+                class="feature-img small"
+                src="./Images/bread_cutout_transparent.png"
+                alt="Choco croissant"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-md-7 reveal" style="--d: 0.2s">
+              <h2 class="title">Ready to taste<br />the magic?</h2>
+              <p class="body-text">
+                Take the first step towards sweet satisfaction - place your
+                order now or subscribe to our newsletter for updates and promo.
+              </p>
+              <form class="sub" action="#">
+                <input
+                  type="email"
+                  id="subEmail"
+                  class="form-control"
+                  placeholder="Enter your email address ..."
+                  required
+                />
+                <button class="btn btn-pill btn-teal">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="container row mx-auto g-4 py-4">
+        <div class="col-md-5">
+          <div class="logo light">BakeJoy</div>
+          <p class="mb-0 mt-3">
+            ( +123 ) 456 7890<br />bakejoy.cakeshop@mail.com
+          </p>
+        </div>
+        <div class="col-4 col-md-2">
+          <a href="#about">About Us</a><a href="#signature">Shop Cakes</a>
+          <a href="#home">Testimonials</a><a href="#contact">Store Locations</a>
+        </div>
+        <div class="col-4 col-md-2">
+          <a href="#journal">Cake Journal</a><a href="#home">Recipes</a>
+          <a href="#home">Our Story</a><a href="#about">Our Values</a>
+        </div>
+        <div class="col-4 col-md-3">
+          <a href="#home">FAQ</a><a href="#home">Terms of Service</a>
+          <a href="#home">Refund Policy</a><a href="#home">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
